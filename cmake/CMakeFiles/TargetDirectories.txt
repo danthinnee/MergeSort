@@ -1,0 +1,3 @@
+/home/elisa/MergeSort/CMakeFiles/edit_cache.dir
+/home/elisa/MergeSort/CMakeFiles/rebuild_cache.dir
+/home/elisa/MergeSort/CMakeFiles/mergesort.dir

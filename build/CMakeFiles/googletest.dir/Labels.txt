@@ -1,0 +1,13 @@
+# Target labels
+ googletest
+# Source files and their labels
+/home/elisa/MergeSort/build/CMakeFiles/googletest
+/home/elisa/MergeSort/build/CMakeFiles/googletest.rule
+/home/elisa/MergeSort/build/CMakeFiles/googletest-complete.rule
+/home/elisa/MergeSort/build/gtest/src/googletest-stamp/googletest-install.rule
+/home/elisa/MergeSort/build/gtest/src/googletest-stamp/googletest-mkdir.rule
+/home/elisa/MergeSort/build/gtest/src/googletest-stamp/googletest-download.rule
+/home/elisa/MergeSort/build/gtest/src/googletest-stamp/googletest-update.rule
+/home/elisa/MergeSort/build/gtest/src/googletest-stamp/googletest-patch.rule
+/home/elisa/MergeSort/build/gtest/src/googletest-stamp/googletest-configure.rule
+/home/elisa/MergeSort/build/gtest/src/googletest-stamp/googletest-build.rule
