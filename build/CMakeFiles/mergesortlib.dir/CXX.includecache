@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/elisa/MergeSort/include/MergeSort.h
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+
+/home/elisa/MergeSort/src/MergeSort.cpp
+../include/MergeSort.h
+/home/elisa/MergeSort/include/MergeSort.h
+

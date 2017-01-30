@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/mergesort.dir/src/MergeSortMain.cpp.o  -o mergesort libmergesortlib.a 
