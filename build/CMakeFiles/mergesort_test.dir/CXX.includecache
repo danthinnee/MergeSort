@@ -18,7 +18,7 @@ iostream
 ../include/MergeSort.h
 /home/elisa/MergeSort/include/MergeSort.h
 
-/home/elisa/MergeSort/test/mergesort_test.cpp
+/home/elisa/MergeSort/test/MergeSort_test.cpp
 gtest/gtest.h
 /home/elisa/MergeSort/test/gtest/gtest.h
 stdio.h

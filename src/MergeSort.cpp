@@ -29,9 +29,9 @@ void Merge(int *A, int *L, int leftCount, int *R, int rightCount) {
 // Recursive function to sort an array of integers.
 void MergeSort(int *A, int n) {
   int mid, i, *L, *R;
-  if (sizeof(*A) == sizeof(int)) {
+  if (n < 1) {
     std::cerr << "ARRAY IS EMPTY. ABORTING EXECUTION.";
-    exit(1);
+    exit(-1);
   }
   // base condition. If the array has less than two elements, do nothing.
   if (n < 2) return;

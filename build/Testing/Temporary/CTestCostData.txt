@@ -1,7 +1,0 @@
-ZeroInput 0 0
-BackwardsInput 0 0
-SameInput 0 0
----
-ZeroInput
-BackwardsInput
-SameInput

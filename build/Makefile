@@ -56,6 +56,16 @@ CMAKE_BINARY_DIR = /home/elisa/MergeSort/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -68,16 +78,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -88,6 +88,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -100,17 +111,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -179,6 +190,19 @@ mergesort: cmake_check_build_system
 mergesort/fast:
 	$(MAKE) -f CMakeFiles/mergesort.dir/build.make CMakeFiles/mergesort.dir/build
 .PHONY : mergesort/fast
+
+#=============================================================================
+# Target rules for targets named mergesort_test
+
+# Build rule for target.
+mergesort_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mergesort_test
+.PHONY : mergesort_test
+
+# fast build rule for target.
+mergesort_test/fast:
+	$(MAKE) -f CMakeFiles/mergesort_test.dir/build.make CMakeFiles/mergesort_test.dir/build
+.PHONY : mergesort_test/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -286,20 +310,49 @@ src/MergeSortMain.cpp.s:
 	$(MAKE) -f CMakeFiles/mergesort.dir/build.make CMakeFiles/mergesort.dir/src/MergeSortMain.cpp.s
 .PHONY : src/MergeSortMain.cpp.s
 
+test/MergeSort_test.o: test/MergeSort_test.cpp.o
+
+.PHONY : test/MergeSort_test.o
+
+# target to build an object file
+test/MergeSort_test.cpp.o:
+	$(MAKE) -f CMakeFiles/mergesort_test.dir/build.make CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o
+.PHONY : test/MergeSort_test.cpp.o
+
+test/MergeSort_test.i: test/MergeSort_test.cpp.i
+
+.PHONY : test/MergeSort_test.i
+
+# target to preprocess a source file
+test/MergeSort_test.cpp.i:
+	$(MAKE) -f CMakeFiles/mergesort_test.dir/build.make CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.i
+.PHONY : test/MergeSort_test.cpp.i
+
+test/MergeSort_test.s: test/MergeSort_test.cpp.s
+
+.PHONY : test/MergeSort_test.s
+
+# target to generate assembly for a file
+test/MergeSort_test.cpp.s:
+	$(MAKE) -f CMakeFiles/mergesort_test.dir/build.make CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.s
+.PHONY : test/MergeSort_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... install"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... mergesortlib"
 	@echo "... rebuild_cache"
 	@echo "... mergesort"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... mergesort_test"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -310,6 +363,9 @@ help:
 	@echo "... src/MergeSortMain.o"
 	@echo "... src/MergeSortMain.i"
 	@echo "... src/MergeSortMain.s"
+	@echo "... test/MergeSort_test.o"
+	@echo "... test/MergeSort_test.i"
+	@echo "... test/MergeSort_test.s"
 .PHONY : help
 
 

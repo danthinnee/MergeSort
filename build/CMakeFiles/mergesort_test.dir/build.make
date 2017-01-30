@@ -57,38 +57,38 @@ include CMakeFiles/mergesort_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mergesort_test.dir/flags.make
 
-CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o: CMakeFiles/mergesort_test.dir/flags.make
-CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o: ../test/mergesort_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elisa/MergeSort/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o -c /home/elisa/MergeSort/test/mergesort_test.cpp
+CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o: CMakeFiles/mergesort_test.dir/flags.make
+CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o: ../test/MergeSort_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elisa/MergeSort/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o -c /home/elisa/MergeSort/test/MergeSort_test.cpp
 
-CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elisa/MergeSort/test/mergesort_test.cpp > CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.i
+CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elisa/MergeSort/test/MergeSort_test.cpp > CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.i
 
-CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elisa/MergeSort/test/mergesort_test.cpp -o CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.s
+CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elisa/MergeSort/test/MergeSort_test.cpp -o CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.s
 
-CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.requires:
+CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.requires:
 
-.PHONY : CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.requires
+.PHONY : CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.requires
 
-CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.provides: CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.requires
-	$(MAKE) -f CMakeFiles/mergesort_test.dir/build.make CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.provides.build
-.PHONY : CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.provides
+CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.provides: CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.requires
+	$(MAKE) -f CMakeFiles/mergesort_test.dir/build.make CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.provides.build
+.PHONY : CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.provides
 
-CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.provides.build: CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o
+CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.provides.build: CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o
 
 
 # Object files for target mergesort_test
 mergesort_test_OBJECTS = \
-"CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o"
+"CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o"
 
 # External object files for target mergesort_test
 mergesort_test_EXTERNAL_OBJECTS =
 
-mergesort_test: CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o
+mergesort_test: CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o
 mergesort_test: CMakeFiles/mergesort_test.dir/build.make
 mergesort_test: googletest-build/googlemock/gtest/libgtest_main.a
 mergesort_test: libmergesortlib.a
@@ -102,7 +102,7 @@ CMakeFiles/mergesort_test.dir/build: mergesort_test
 
 .PHONY : CMakeFiles/mergesort_test.dir/build
 
-CMakeFiles/mergesort_test.dir/requires: CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o.requires
+CMakeFiles/mergesort_test.dir/requires: CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o.requires
 
 .PHONY : CMakeFiles/mergesort_test.dir/requires
 

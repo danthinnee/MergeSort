@@ -25,7 +25,6 @@ TEST(MergeSortTest, BackwardsInput) {
         int expected_result[9] = {1,2,3,4,5,6,7,8,9};
         MergeSort(tested, 9);
 	for(int i=0; i<9; i++)
-	std:: cout << tested[i] << endl;
         EXPECT_TRUE(ArraysMatch(expected_result, tested, 1));
 }
 
@@ -39,6 +38,6 @@ TEST(MergeSortTest, SameInput) {
 
 TEST(MergeSortTest, NoInput) {
         int tested[1] = {};
-	ASSERT_DEATH(this->MergeSort(tested,0), "ARRAY IS EMPTY. ABORTING EXECUTION.i");
+	ASSERT_DEATH(MergeSort(tested,0), "ARRAY IS EMPTY. ABORTING EXECUTION.");
 }
 

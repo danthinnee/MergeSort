@@ -1,4 +1,4 @@
-./build
-./gtest
-./cmake
+./build/*
+./gtest/*
+./cmake/*
 

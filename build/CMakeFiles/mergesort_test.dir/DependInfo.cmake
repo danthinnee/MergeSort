@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/elisa/MergeSort/test/mergesort_test.cpp" "/home/elisa/MergeSort/build/CMakeFiles/mergesort_test.dir/test/mergesort_test.cpp.o"
+  "/home/elisa/MergeSort/test/MergeSort_test.cpp" "/home/elisa/MergeSort/build/CMakeFiles/mergesort_test.dir/test/MergeSort_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
