@@ -41,7 +41,7 @@ endif()
 if (test)
   enable_testing()
 
-  add_executable(mergesort_test ./test/mergesort_test.cpp)
+  add_executable(mergesort_test ./test/MergeSort_test.cpp)
   target_link_libraries(mergesort_test gtest_main)
   target_link_libraries(mergesort_test mergesortlib)
   add_test(ZeroInput COMMAND mergesort_test)

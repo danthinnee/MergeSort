@@ -6,7 +6,7 @@ bool ArraysMatch (int *A, int *B, int size){
 	bool returnBool=true;
 	for(int k=0; k<size; k++){
 		if(A[k] !=B[k]){
-			std::cout << "DON't WORK AT " << k << "cxc" << A[k] << " eewf" << B[k] << std::endl;
+			std::cout << "DON'T WORK AT " << k << ". A[k] = " << A[k] << " and B[k] = " << B[k] << std::endl;
 			returnBool = false;
 		}
 	}
@@ -24,6 +24,8 @@ TEST(MergeSortTest, BackwardsInput) {
 	int tested[9] = {9,8,7,6,5,4,3,2,1};
         int expected_result[9] = {1,2,3,4,5,6,7,8,9};
         MergeSort(tested, 9);
+	for(int i=0; i<9; i++)
+	std:: cout << tested[i] << endl;
         EXPECT_TRUE(ArraysMatch(expected_result, tested, 1));
 }
 
